@@ -9,7 +9,7 @@ menu:
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
-  text: 做点有意义的事情 # 显示的文字
+  text: 做点有意思的事情 # 显示的文字
   text2: 愿你一生努力，一生被爱 # 滚动播放，如果不需要可以留空
   text3: 想要的都拥有，得不到的都释怀 # 最多支持三段文字
   startDelay: 0 # 延迟时间
@@ -26,7 +26,7 @@ logo: /images/ayer-side.svg
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 cover:
   enable: true
-  path: /images/cover1.jpg # /source/images目录下附送多张精美壁纸，可任意更换
+  path: /images/cover6.jpg # /source/images目录下附送多张精美壁纸，可任意更换
   logo: /images/ayer.svg # 如果不要直接设置成false
 
 # 页面顶部进度条
@@ -47,9 +47,9 @@ excerpt_all: false
 # 是否开启代码复制按钮
 copy_btn: true
 # 是否开启文章分享按钮
-share_enable: true
+share_enable: false
 # 国内的社交平台(If you are not in China, maybe you prefer to set:false)
-share_china: true
+share_china: false
 # 文章分享文字
 share_text: 分享
 
@@ -122,7 +122,7 @@ github:
 
 # 网易云音乐插件
 music:
-  enable: false
+  enable: true
   # 播放器尺寸类型(1：小尺寸、2：大尺寸)
   type: 1
   id: 22707008 # 网易云分享的音乐ID(更换音乐请更改此配置项)
@@ -203,7 +203,7 @@ leancloud:
   app_key: #
 # Valine配置
 valine:
-  enable: false # 是否启用
+  enable: true # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 
