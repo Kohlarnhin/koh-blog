@@ -96,7 +96,7 @@ search: true
 # rss: /atom.xml
 
 # 是否启用黑夜模式开关
-darkmode: false
+darkmode: true
 
 # 动态背景效果: 0-关闭，1-动态线条(跟随鼠标)
 canvas_bg: 1
@@ -130,7 +130,7 @@ music:
 
 # 访问量统计(不蒜子)
 busuanzi:
-  enable: false
+  enable: true
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
@@ -140,7 +140,7 @@ cnzz:
 # Google Analytics
 google_analytics: ""
 # 百度统计
-baidu_analytics: ""
+baidu_analytics: "6f8d946796daae2a743df0bcdf21f88e"
 
 # Mathjax数学公式
 mathjax: false

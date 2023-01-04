@@ -108,3 +108,9 @@ deploy:
   type: git
   repo: https://github.com/kohlarnhin/kohlarnhin.github.io.git
   branch: master
+
+# search
+search:
+  path: search.xml
+  field: post
+  format: html
