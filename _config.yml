@@ -106,5 +106,5 @@ theme: ayer
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Kohlarnhin/koh-blog.git
+  repo: https://github.com/kohlarnhin/kohlarnhin.github.io.git
   branch: master
