@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>在jenkins以及流水线pipeline中使用nerdctl进行构建镜像和推送 |  清水</title>
+      <title>2023/02/24/在jenkins以及流水线pipeline中使用nerdctl进行构建镜像和推送 |  清水</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  在jenkins以及流水线pipeline中使用nerdctl进行构建镜像和推送
+  2023/02/24/在jenkins以及流水线pipeline中使用nerdctl进行构建镜像和推送
 </h1>
  
 
@@ -121,27 +121,27 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
        
   <h2 id="devops-jenkins使用nerdctl"><a href="#devops-jenkins使用nerdctl" class="headerlink" title="devops-jenkins使用nerdctl"></a>devops-jenkins使用nerdctl</h2><p>首先使用admin账户登录kubesphere，进入到工作负载中，搜索devops-jenkins进入</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C01.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/01.png"></p>
 <p>进行编辑设置</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C02.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/02.png"></p>
 <p>主要是对存储进行编辑，挂载宿主机上的nerdctl相关文件，让devops-jenkins也能够使用nerdctl</p>
 <p>nerdctl，buildkitd.sock，buildctl，containerd.sock挂载如下图所示</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C03.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/03.png"></p>
 <p>注意</p>
 <p>这些配置都需要设置子路劲</p>
 <p>示例</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C04.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/04.png"></p>
 <p>然后等待devops-jenkins重新创建，进入终端使用nerdctl就不会报 <code>-bash: nerdctl: command not found</code></p>
 <p>会显示nerdctl的信息</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C05.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/05.png"></p>
 <p>到这里，devops-jenkins是可以正常使用了，但是创建流水线是一个新的maven容器，还是会报<code>-bash: nerdctl: command not found</code>。</p>
 <p>这里主要是对maven进行修改，其他类同。</p>
 <p>所以还需要对通过jenkins创建的容器进行挂载devops-jenkins上的nerdctl相关配置。</p>
 <h2 id="pipeline是用nerdctl"><a href="#pipeline是用nerdctl" class="headerlink" title="pipeline是用nerdctl"></a>pipeline是用nerdctl</h2><p>进入配置-配置字典-搜索jenkins，找到jenkins-casc-config进行编辑yaml修改内容。</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C06.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/06.png"></p>
 <p>首先选择你要修改的容器，这里以maven为例。</p>
 <p>对maven容器下的volumeMounts和volumes添加挂载配置</p>
-<p><img src="/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81%5C07.png"></p>
+<p><img src="/2023/02/24/%E5%9C%A8jenkins%E4%BB%A5%E5%8F%8A%E6%B5%81%E6%B0%B4%E7%BA%BFpipeline%E4%B8%AD%E4%BD%BF%E7%94%A8nerdctl%E8%BF%9B%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%92%8C%E6%8E%A8%E9%80%81/07.png"></p>
 <p>配置内容截取</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">volumeMounts:</span><br><span class="line">- name: config-volume</span><br><span class="line">mountPath: /opt/apache-maven-3.5.3/conf/settings.xml</span><br><span class="line">subPath: settings.xml</span><br><span class="line">- name: nerdctl</span><br><span class="line">mountPath: /usr/bin/nerdctl</span><br><span class="line">subPath: nerdctl</span><br><span class="line">- name: buildkitd-sock</span><br><span class="line">mountPath: /var/run/buildkit/buildkitd.sock</span><br><span class="line">subPath: buildkitd.sock</span><br><span class="line">- name: containerd-sock</span><br><span class="line">mountPath: /var/run/containerd/containerd.sock</span><br><span class="line">subPath: containerd.sock                           </span><br><span class="line">- name: buildctl</span><br><span class="line">mountPath: /usr/bin/buildctl</span><br><span class="line">subPath: buildctl</span><br><span class="line"></span><br><span class="line">volumes:</span><br><span class="line">- name: config-volume</span><br><span class="line">configMap:</span><br><span class="line">name: ks-devops-agent</span><br><span class="line">items:</span><br><span class="line">- key: MavenSetting</span><br><span class="line">path: settings.xml</span><br><span class="line">- name: nerdctl</span><br><span class="line">hostPath:</span><br><span class="line">path: /usr/local/bin</span><br><span class="line">- name: buildkitd-sock</span><br><span class="line">hostPath:</span><br><span class="line">path: /var/run/buildkit</span><br><span class="line">- name: buildctl</span><br><span class="line">hostPath:</span><br><span class="line">path: /usr/local/bin </span><br></pre></td></tr></table></figure>
 
